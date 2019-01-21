@@ -1,30 +1,29 @@
-/* jshint node: true */
-'use strict';
+"use strict";
 
-var path = require('path');
-var Funnel = require('broccoli-funnel');
-var MergeTrees = require('broccoli-merge-trees');
+var path = require("path");
+var Funnel = require("broccoli-funnel");
+var MergeTrees = require("broccoli-merge-trees");
 
 module.exports = {
-  name: 'ember-cli-neat',
+  name: "ember-cli-neat",
 
   blueprintsPath: function() {
-    return path.join(__dirname, 'blueprints');
+    return path.join(__dirname, "blueprints");
   },
 
   treeForStyles: function() {
-    var bourbonPath = path.dirname(require.resolve('bourbon'));
+    var bourbonPath = path.dirname(require.resolve("bourbon"));
     var bourbonFunnel = new Funnel(bourbonPath, {
-      srcDir: 'app/assets/stylesheets',
-      destDir: 'app/styles',
-      annotation: 'Funnel (bourbon)'
+      srcDir: "app/assets/stylesheets",
+      destDir: "app/styles",
+      annotation: "Funnel (bourbon)"
     });
 
-    var neatPath = path.dirname(require.resolve('bourbon-neat'));
+    var neatPath = path.dirname(require.resolve("bourbon-neat"));
     var neatFunnel = new Funnel(neatPath, {
-      srcDir: 'core',
-      destDir: 'app/styles',
-      annotation: 'Funnel (neat)'
+      srcDir: "core",
+      destDir: "app/styles",
+      annotation: "Funnel (neat)"
     });
 
     return new MergeTrees([bourbonFunnel, neatFunnel]);
