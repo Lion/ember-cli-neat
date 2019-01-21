@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "bourbon": "^4.3.3",
-    "bourbon-neat": "~2.0.0",
+    "bourbon-neat": "~3.0.1",
     "broccoli-merge-trees": "^1.2.4",
     "broccoli-funnel": "^1.1.0",
     "ember-cli-babel": "^5.1.7"
