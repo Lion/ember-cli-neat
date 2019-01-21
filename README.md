@@ -10,6 +10,7 @@ a bower dependency.
 Your project should already be set up to handle sass/scss builds. If you're not, do so by running:
 
     ember install ember-cli-sass
+
 ## Usage
 
 In your ember-cli (>= 0.1.1) project, run:
@@ -24,27 +25,21 @@ The generator will create an `app.scss` with the sole contents being:
 If you already have content in your `app.scss`, you can just choose "n" and add that
 line to the top of `app.scss` yourself.
 
+- `git clone <repository-url>` this repository
+- `cd ember-cli-neat`
+- `npm install`
+- `bower install`
+
+- Ember.js v2.18 or above
+- Ember CLI v2.13 or above
+
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-neat`
-* `npm install`
-* `bower install`
+```
+ember install my-addon
+```
 
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
+## Usage
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
